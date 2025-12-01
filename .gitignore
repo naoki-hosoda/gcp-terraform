@@ -1,0 +1,152 @@
+# ============================================
+# Terraform .gitignore (GCP Public Repository)
+# ============================================
+
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform lock file (commit this for consistency)
+# .terraform.lock.hcl
+
+# State files - CRITICAL for public repos
+*.tfstate
+*.tfstate.*
+.tfstate.lock.info
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Variable files that may contain secrets
+# IMPORTANT: Never commit files with actual values
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Exception: You can create example files like:
+# !terraform.tfvars.example
+# !example.auto.tfvars
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# ============================================
+# GCP Specific
+# ============================================
+
+# GCP Service Account Keys - NEVER commit these!
+**/credentials.json
+**/service-account*.json
+**/*-key.json
+**/*-credentials.json
+**/.gcp/
+**/.config/gcloud/
+
+# GCP Application Default Credentials
+application_default_credentials.json
+
+# ============================================
+# IDE & Editor
+# ============================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (IntelliJ, PyCharm, etc.)
+.idea/
+*.iml
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================
+# OS Specific
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ============================================
+# Other
+# ============================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Log files
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Environment variables (if used)
+.env
+.env.local
+.env.*.local
+
+# Terraform plan output files
+*.tfplan
+tfplan*
+
+# Ignore Terraform modules (uncomment if you prefer to commit them)
+# .terraform/modules/
+
+# Terragrunt
+.terragrunt-cache/
+
+# Sentinel
+.sentinel
+
+# Python (if using Python for Terraform scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# Node modules (if using CDK for Terraform)
+node_modules/
+
+# ============================================
+# Custom Project Specific (add below)
+# ============================================
+
+# Add your project-specific ignores here
+
